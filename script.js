@@ -1,58 +1,90 @@
-// function printAlphabets(letter, delay) {
-//     setTimeout(() => {
-//         console.log(letter)
-//     }, delay)
+// let user = {
+//     age: 30,
+//     firstName: 'Rahul',
+//     sayHi: function () {
+//         console.log('hi', this.firstName)
+//     }
 // }
 
-// printAlphabets('a', 1000)
-// printAlphabets('b', 2000)
-// printAlphabets('c', 3000)
-
-
-
-// function printValue() {
-//     setTimeout(() => {
-//         console.log('First timeout')
-//         setTimeout(() => {
-//             console.log('Second Timeout')
-//         }, 2000)
-//     }, 2000)
+// var firstName = 'Aditi'
+// function sayHi() {
+//     console.log(this) //inside a normal function, "this" refers to the global object
+//     console.log(this.firstName)
+// }
+// let user = {
+//     firstName: 'rahul',
+//     objectType: 'USER'
+// }
+// let admin = {
+//     firstName: 'shruti',
+//     objectType: 'ADMIN'
 // }
 
-// printValue()
-
-// function printAlphabets() {
-//     setTimeout(() => {
-//         console.log('A')
-//         setTimeout(() => {
-//             console.log('B')
-//             setTimeout(() => {
-//                 console.log('C')
-//                 setTimeout(() => {
-//                     console.log('D')
-//                 }, 1000)
-//             }, 1000)
-//         }, 1000)
-//     }, 1000)
-// }
-// printAlphabets()
-
-// function printLetter(letter, cb) {
-//     setTimeout(() => {
-//         console.log(letter)
-//     }, 1000)
-//     cb()
+// let user2 = {
+//     firstName: 'Bhanu',
+//     sayHi: () => {
+//         console.log(this.firstName) //"this" inside an arrow function refers to the WINDOW object
+//     }
 // }
 
-// function printAlphabets() {
-//     printLetter('A', () => {
-//         printLetter('B', () => {
-//             printLetter('C', () => {
-//                 printLetter('D', () => {
-//                     console.log('End')
-//                 })
-//             })
-//         })
-//     })
+// user.funcUser()
+// admin.funcAdmin()
+// sayHi()
+// user2.sayHi()
+
+
+
+
+// // question
+
+// let ladder = {
+//     step: 0,
+//     up() {
+//         // this.step++
+//         console.log(this.step++)
+//     },
+//     down() {
+//         this.step--
+//         console.log('decremented')
+//     },
+//     showStep() {
+//         console.log(this.step)
+//     }
 // }
-// printAlphabets()
+
+// ladder.up()
+// ladder.up()
+// ladder.down()
+// ladder.down()
+// ladder.down()
+// ladder.showStep()//-1
+// ladder.up()
+// ladder.up()
+// ladder.up()
+// // ladder.showStep()//2
+
+
+// const obj = {
+//     message: 'Hello, World',
+//     getMessage() {
+//         const message = 'Hello, Earth'
+//         return this.message
+//     }
+// }
+
+// let result = obj.getMessage()
+// console.log(result) //
+
+
+// let obj = {
+//     who: 'World',
+//     greet: function () {
+//         console.log(`Hello, ${this.who}`)
+//     },
+//     farewell: () => {
+//         console.log(`Goodbye, ${this.who}`)
+//     }
+// }
+
+// obj.greet()
+// obj.farewell()
